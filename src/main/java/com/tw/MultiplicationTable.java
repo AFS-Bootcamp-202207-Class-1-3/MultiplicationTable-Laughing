@@ -21,7 +21,11 @@ public class MultiplicationTable {
     }
 
     public String generateTable(int start, int end) {
-        return null;
+        List<String> Lines=new ArrayList<>();
+        for(int i=start;i<=end;i++){
+            Lines.add(generateLine(start,i));
+        }
+        return String.join(System.lineSeparator(),Lines);
     }
 
     public String generateLine(int start, int row) {
