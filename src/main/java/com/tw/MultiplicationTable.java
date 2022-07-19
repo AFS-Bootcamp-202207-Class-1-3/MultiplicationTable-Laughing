@@ -1,5 +1,8 @@
 package com.tw;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MultiplicationTable {
     public String create(int start, int end) {
         return null;
@@ -22,7 +25,11 @@ public class MultiplicationTable {
     }
 
     public String generateLine(int start, int row) {
-        return null;
+        List<String> expressions=new ArrayList<>();
+        for(int i=start;i<=row;i++){
+            expressions.add(generateSingleExpression(i,row));
+        }
+        return String.join("  ",expressions);
     }
 
     public String generateSingleExpression(int multiplicand, int multiplier) {
